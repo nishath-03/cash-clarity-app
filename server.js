@@ -65,5 +65,5 @@ app.post("/get-suggestion", async (req, res) => {
 });
 
 // ✅ Render requires `PORT` to be dynamically assigned
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
