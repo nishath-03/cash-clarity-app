@@ -1,16 +1,16 @@
 {
-  "name": "cash_clarity",
+  "name": "cash-clarity-app",
   "version": "1.0.0",
-  "description": "Financial tracking and suggestions",
+  "description": "AI-powered financial suggestion web app",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "axios": "^1.8.1",
     "cors": "^2.8.5",
-    "express": "^4.21.2",
-    "pdfkit": "^0.16.0"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
   }
 }
