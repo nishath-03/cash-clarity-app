@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash Clarity - Financial Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h2 class="text-2xl font-bold text-gray-800 text-center">Clash Clarity - Financial Planner</h2>
+        <form id="financeForm" class="mt-4">
+            <label class="block text-gray-700">💰 Monthly Salary (₹):</label>
+            <input type="number" id="salary" required>
+
+            <label class="block text-gray-700 mt-3">🏠 Fixed Expenses (₹):</label>
+            <input type="number" id="fixedExpenses" required>
+
+            <label class="block text-gray-700 mt-3">🛍️ Variable Expenses (₹):</label>
+            <input type="number" id="variableExpenses" required>
+
+            <label class="block text-gray-700 mt-3">💾 Savings Goal (₹):</label>
+            <input type="number" id="savingsGoal" required>
+
+            <label class="block text-gray-700 mt-3">💳 Debt (₹):</label>
+            <input type="number" id="debt" required>
+
+            <button type="submit" id="submitButton" class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                📊 Get Financial Advice
+            </button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("financeForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Retrieve values from input fields
+            const salary = parseFloat(document.getElementById("salary").value);
+            const fixedExpenses = parseFloat(document.getElementById("fixedExpenses").value);
+            const variableExpenses = parseFloat(document.getElementById("variableExpenses").value);
+            const savingsGoal = parseFloat(document.getElementById("savingsGoal").value);
+            const debt = parseFloat(document.getElementById("debt").value);
+
+            // Store user input in localStorage
+            localStorage.setItem("salary", salary);
+            localStorage.setItem("fixedExpenses", fixedExpenses);
+            localStorage.setItem("variableExpenses", variableExpenses);
+            localStorage.setItem("savingsGoal", savingsGoal);
+            localStorage.setItem("debt", debt);
+
+            console.log("Form submitted successfully! Redirecting to results page...");
+
+            // Redirect to results page after storing data
+            window.location.href = "results.html";
+        });
+    </script>
+</body>
+</html>
